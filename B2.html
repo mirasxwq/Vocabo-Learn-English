@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Vocabo — B2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2 class="center">Рівень B2 – Завдання</h2>
+
+    <!-- READING -->
+    <h3>Reading</h3>
+
+    <p class="muted">
+        Technology has changed the way people work and communicate.  
+        Many companies now allow employees to work remotely,  
+        which increases flexibility and productivity.  
+        Workers often report that they can manage their time better  
+        and balance personal responsibilities more effectively.
+    </p>
+
+    <form>
+        <p>1) What has changed the way people work?<br>
+            <label><input type="radio" name="reading_q1" value="Technology"> Technology</label><br>
+            <label><input type="radio" name="reading_q1" value="Transport"> Transport</label>
+        </p>
+
+        <p>2) How do many employees work now?<br>
+            <label><input type="radio" name="reading_q2" value="Remotely"> Remotely</label><br>
+            <label><input type="radio" name="reading_q2" value="OnlyOffice"> Only in the office</label>
+        </p>
+
+        <p>3) What increases due to remote work?<br>
+            <label><input type="radio" name="reading_q3" value="Flexibility"> Flexibility</label><br>
+            <label><input type="radio" name="reading_q3" value="Salary"> Salary</label>
+        </p>
+    </form>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn btn-blue" onclick="checkReading('B2')">Перевірити</button>
+        <button id="readingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні: Technology, Remotely, Flexibility')">Правильні відповіді</button>
+    </div>
+
+    <div id="readingResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <!-- SPEAKING -->
+    <h3>Speaking</h3>
+
+    <p class="muted">Прослухай фразу, скажи її, і система порівняє результат.</p>
+
+    <button class="btn btn-yellow" onclick="speakText(samples.B2.pronunciation)">Прослухати 🔊</button>
+    <button class="btn btn-blue" onclick="stopSpeech()">Зупинити</button>
+
+    <button id="recBtn" class="btn btn-blue" onclick="toggleRecording()">Записати</button>
+    <button class="btn btn-blue" onclick="checkPronunciation('B2')">Перевірити</button>
+    <button id="pronAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Зразок: Remote work improves productivity and work-life balance.')">Правильні відповіді</button>
+
+    <div id="recognizedText" style="margin-top:10px; min-height:40px;"></div>
+    <div id="pronResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="index.html"><button class="btn btn-blue">На головну</button></a>
+        <a href="results.html"><button class="btn btn-yellow">Результати</button></a>
+    </div>
+   
+
+    <!-- LISTENING -->
+    <h3>Listening</h3>
+
+    <p class="muted">Прослухай діалог та відповідай на питання.</p>
+
+    <button class="btn btn-yellow" onclick="playDialogue('B2')">Прослухати 🔊</button>
+    <button class="btn btn-blue" onclick="stopSpeech()">Зупинити</button>
+
+    <form>
+        <p>1) Where has John been working?<br>
+            <label><input type="radio" name="l1" value="Home"> From home</label><br>
+            <label><input type="radio" name="l1" value="Office"> From the office</label>
+        </p>
+
+        <p>2) What can he manage better?<br>
+            <label><input type="radio" name="l2" value="Time"> His time</label><br>
+            <label><input type="radio" name="l2" value="Money"> His money</label>
+        </p>
+
+        <p>3) What can he focus more on?<br>
+            <label><input type="radio" name="l3" value="Focus"> His tasks</label><br>
+            <label><input type="radio" name="l3" value="Friends"> His friends</label>
+        </p>
+    </form>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn btn-blue" onclick="checkListening('B2')">Перевірити</button>
+        <button id="listeningAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні: Home, Time, Focus')">Правильні відповіді</button>
+    </div>
+
+    <div id="listeningResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <!-- WRITING -->
+    <h3>Writing / Pronunciation</h3>
+
+    <p class="muted">Опиши картинку англійською</p>
+
+    <img src="https://images.unsplash.com/photo-1587614382346-ac6a9b7d8c94?q=80&w=800"
+         class="responsive" alt="Remote work with laptop and video call">
+
+    <input id="speakTextInput" type="text" placeholder="Your description...">
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+        <button class="btn btn-blue" onclick="checkSpeaking('B2')">Перевірити</button>
+        <button id="speakingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Зразок: People are working remotely using laptops and video calls')">Правильні відповіді</button>
+    </div>
+
+    <div id="speakingResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+    
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Vocabo — A2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2 class="center">Рівень A2 – Завдання</h2>
+
+    <!-- READING -->
+    <h3>Reading</h3>
+
+    <p class="muted">
+        Tom lives in a small town near the mountains.  
+        Every morning, he walks to school with his friend Anna.  
+        They like to talk about animals.
+    </p>
+
+    <form>
+        <p>1) Who lives in the small town?<br>
+            <label><input type="radio" name="reading_q1" value="Tom"> Tom</label><br>
+            <label><input type="radio" name="reading_q1" value="John"> John</label>
+        </p>
+
+        <p>2) What is the town near?<br>
+            <label><input type="radio" name="reading_q2" value="Mountains"> The mountains</label><br>
+            <label><input type="radio" name="reading_q2" value="River"> The river</label>
+        </p>
+
+        <p>3) Who walks with Tom to school?<br>
+            <label><input type="radio" name="reading_q3" value="Anna"> Anna</label><br>
+            <label><input type="radio" name="reading_q3" value="Peter"> Peter</label>
+        </p>
+    </form>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn btn-blue" onclick="checkReading('A2')">Перевірити</button>
+        <button id="readingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні відповіді: Tom, Mountains, Anna')">Правильні відповіді</button>
+    </div>
+
+    <div id="readingResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <!-- SPEAKING -->
+    <h3>Speaking</h3>
+    <p class="muted">Прослухай фразу, скажи її, і система порівняє результат.</p>
+
+    <button class="btn btn-yellow" onclick="speakText(samples.A2.pronunciation)">Прослухати 🔊</button>
+    <button class="btn btn-blue" onclick="stopSpeech()">Зупинити</button>
+
+    <button id="recBtn" class="btn btn-blue" onclick="toggleRecording()">Записати</button>
+    <button class="btn btn-blue" onclick="checkPronunciation('A2')">Перевірити</button>
+    <button id="pronAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Зразок: We are walking to the mountain village.')">Правильні відповіді</button>
+
+    <div id="recognizedText" style="margin-top:10px; min-height:40px;"></div>
+    <div id="pronResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="index.html"><button class="btn btn-blue">На головну</button></a>
+        <a href="results.html"><button class="btn btn-yellow">Результати</button></a>
+    </div>
+
+
+    <!-- LISTENING -->
+    <h3>Listening</h3>
+    <p class="muted">Прослухай діалог та відповідай на питання.</p>
+
+    <button class="btn btn-yellow" onclick="playDialogue('A2')">Прослухати 🔊</button>
+    <button class="btn btn-blue" onclick="stopSpeech()">Зупинити</button>
+
+    <form>
+        <p>1) Where do Tom and Anna want to go?<br>
+            <label><input type="radio" name="l1" value="Zoo"> To the zoo</label><br>
+            <label><input type="radio" name="l1" value="Park"> To the park</label>
+        </p>
+
+        <p>2) What does Anna love?<br>
+            <label><input type="radio" name="l2" value="Animals"> Animals</label><br>
+            <label><input type="radio" name="l2" value="Cars"> Cars</label>
+        </p>
+
+        <p>3) What does Tom want to see?<br>
+            <label><input type="radio" name="l3" value="Monkeys"> Monkeys</label><br>
+            <label><input type="radio" name="l3" value="Birds"> Birds</label>
+        </p>
+    </form>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn btn-blue" onclick="checkListening('A2')">Перевірити</button>
+        <button id="listeningAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні: Zoo, Animals, Monkeys')">Правильні відповіді</button>
+    </div>
+
+    <div id="listeningResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <!-- WRITING -->
+	    <p class="muted">Опиши картинку англійською</p>
+
+    <img src="image\coffe.png"
+         class="responsive" alt="A small cup of coffee is standing on a wooden table.
+Next to the cup, there is an open book">
+
+    <input id="speakTextInput" type="text" placeholder="Your description...">
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+        <button class="btn btn-blue" onclick="checkSpeaking('A2')">Перевірити</button>
+        <button id="speakingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Зразок: Two children are walking near the mountains')">Правильні відповіді</button>
+    </div>
+
+    <div id="speakingResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+</div>
+
+</body>
+</html>

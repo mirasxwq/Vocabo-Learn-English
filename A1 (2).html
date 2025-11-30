@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Vocabo — A1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2 class="center">Рівень A1 – Завдання</h2>
+
+    <!-- READING -->
+    <h3>Reading</h3>
+    <p class="muted" id="readingText">
+        I have a cat. Her name is Luna. She is gray and small. She likes to sleep on the sofa.
+    </p>
+
+    <form>
+        <p>1) What is the cat's name?<br>
+            <label><input type="radio" name="reading_q1" value="Luna"> Luna</label><br>
+            <label><input type="radio" name="reading_q1" value="Kitty"> Kitty</label>
+        </p>
+
+        <p>2) What color is the cat?<br>
+            <label><input type="radio" name="reading_q2" value="Gray"> Gray</label><br>
+            <label><input type="radio" name="reading_q2" value="Black"> Black</label>
+        </p>
+
+        <p>3) Where does the cat sleep?<br>
+            <label><input type="radio" name="reading_q3" value="Sofa"> On the sofa</label><br>
+            <label><input type="radio" name="reading_q3" value="Garden"> In the garden</label>
+        </p>
+    </form>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn btn-blue" onclick="checkReading('A1')">Перевірити</button>
+        <button id="readingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні відповіді: Luna, Gray, On the sofa')">Правильні відповіді</button>
+    </div>
+
+    <div id="readingResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <!-- SPEAKING -->
+    <h3>Speaking</h3>
+<p class="muted">Прослухай фразу, скажи її, і система порівняє результат.</p>
+
+    <button class="btn btn-yellow" onclick="speakText(samples.A1.pronunciation)">Прослухати 🔊</button>
+    <button class="btn btn-blue" onclick="stopSpeech()">Зупинити</button>
+
+    <button id="recBtn" class="btn btn-blue" onclick="toggleRecording()">Записати</button>
+    <button class="btn btn-blue" onclick="checkPronunciation('A1')">Перевірити</button>
+    <button id="pronAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Зразок: I have a little kitten.')">Правильні відповіді</button>
+
+    <div id="recognizedText" style="margin-top:10px; min-height:40px;"></div>
+    <div id="pronResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <!-- LISTENING -->
+    <h3>Listening</h3>
+    <p class="muted">Прослухай діалог та відповідай на питання.</p>
+
+    <button class="btn btn-yellow" onclick="playDialogue('A1')">Прослухати 🔊</button>
+    <button class="btn btn-blue" onclick="stopSpeech()">Зупинити</button>
+
+    <form>
+        <p>1) What is the cat’s name?<br>
+            <label><input type="radio" name="l1" value="Milka"> Milka</label><br>
+            <label><input type="radio" name="l1" value="Businka"> Businka</label>
+        </p>
+
+        <p>2) What color is Milka?<br>
+            <label><input type="radio" name="l2" value="C"> Gray with white paws</label><br>
+            <label><input type="radio" name="l2" value="D"> Orange</label>
+        </p>
+
+        <p>3) What does Milka like to do?<br>
+            <label><input type="radio" name="l3" value="B"> Chase a ball of yarn</label><br>
+            <label><input type="radio" name="l3" value="A"> Sleep all day</label>
+        </p>
+    </form>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn btn-blue" onclick="checkListening('A1')">Перевірити</button>
+        <button id="listeningAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні: Milka, Gray with white paws, Chase a ball of yarn')">Правильні відповіді</button>
+    </div>
+
+    <div id="listeningResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+
+    <!-- WRITING / PRONUNCIATION -->
+    <h3>Writing / Pronunciation</h3>
+	    <p class="muted">Опиши картинку англійською</p>
+
+    <img src="image\cat.png"
+         class="responsive" alt="Black cat in box">
+
+    <input id="speakTextInput" type="text" placeholder="Your description...">
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+        <button class="btn btn-blue" onclick="checkSpeaking('A1')">Перевірити</button>
+        <button id="speakingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Зразок: A black cat is sitting in a box')">Правильні відповіді</button>
+    </div>
+
+    <div id="speakingResult" class="muted" style="margin-top:10px;"></div>
+
+    <hr><br>
+    
+
+    <!-- NAV -->
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="index.html"><button class="btn btn-blue">На головну</button></a>
+        <a href="results.html"><button class="btn btn-yellow">Результати</button></a>
+    </div>
+
+</div>
+
+</body>
+</html>
