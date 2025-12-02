@@ -56,7 +56,7 @@ h1, h2 {
 }
 
 img.responsive {
-    max-width: 260px;
+    max-width: 180px;
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -76,3 +76,4 @@ input[type=text], textarea {
     .card { margin:12px; padding:14px; }
     img.responsive { max-width:200px; }
 }
+
