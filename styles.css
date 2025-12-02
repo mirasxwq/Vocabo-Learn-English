@@ -62,7 +62,10 @@ img.responsive {
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
-<img src="img/vocabo.jpg" style="width: 50%; height: auto;">
+img.responsive {
+    width: 25%;
+    height: auto;
+
 }
 
 input[type=text], textarea {
@@ -78,6 +81,7 @@ input[type=text], textarea {
     .card { margin:12px; padding:14px; }
     img.responsive { max-width:200px; }
 }
+
 
 
 
