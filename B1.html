@@ -18,31 +18,32 @@
     <h3>Reading</h3>
 
     <p class="muted">
-        Sarah enjoys traveling. Last summer she visited Spain,  
-        where she explored old streets, tasted traditional food,  
-        and learned a few Spanish words.
+        Yesterday I was walking home when I found a phone on a bench. I picked it up and saw many missed calls. 
+        I answered the next call. A worried woman asked about her phone.
+        We met near a café, and I returned it to her. She thanked me and gave me a small box of chocolates.
+        I felt happy because I helped someone.
     </p>
 
     <form>
-        <p>1) Which country did Sarah visit?<br>
-            <label><input type="radio" name="reading_q1" value="Spain"> Spain</label><br>
-            <label><input type="radio" name="reading_q1" value="Italy"> Italy</label>
+        <p>1) Where did the writer find the phone?<br>
+            <label><input type="radio" name="reading_q1" value="In a shop"> In a shop</label><br>
+            <label><input type="radio" name="reading_q1" value="On the bus"> On the bus</label>
         </p>
 
-        <p>2) What did she taste there?<br>
-            <label><input type="radio" name="reading_q2" value="Food"> Traditional food</label><br>
-            <label><input type="radio" name="reading_q2" value="Drinks"> Drinks</label>
+        <p>2) Who called the phone?<br>
+            <label><input type="radio" name="reading_q2" value="A worried woman"> A worried woman</label><br>
+            <label><input type="radio" name="reading_q2" value="The police"> The police</label>
         </p>
 
-        <p>3) What language did she learn a little of?<br>
-            <label><input type="radio" name="reading_q3" value="Spanish"> Spanish</label><br>
-            <label><input type="radio" name="reading_q3" value="German"> German</label>
+        <p>3) How did the writer feel at the end?<br>
+            <label><input type="radio" name="reading_q3" value="Sad"> Sad</label><br>
+            <label><input type="radio" name="reading_q3" value="Happy"> Happy</label>
         </p>
     </form>
 
     <div style="display:flex; gap:10px; flex-wrap:wrap;">
         <button class="btn btn-blue" onclick="checkReading('B1')">Перевірити</button>
-        <button id="readingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні відповіді: Spain, Traditional food, Spanish')">Правильні відповіді</button>
+        <button id="readingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні відповіді: On a bench, A worried woman, Happy')">Правильні відповіді</button>
     </div>
 
     <div id="readingResult" class="muted" style="margin-top:10px;"></div>
@@ -78,17 +79,17 @@
     <button class="btn btn-blue" onclick="stopSpeech()">Зупинити</button>
 
     <form>
-        <p>1) Where did Sarah travel?<br>
+        <p>1) Where has Sarah travelled?<br>
             <label><input type="radio" name="l1" value="Spain"> Spain</label><br>
             <label><input type="radio" name="l1" value="France"> France</label>
         </p>
 
-        <p>2) What did she like most?<br>
+        <p>2) What has she liked the most?<br>
             <label><input type="radio" name="l2" value="Streets"> The old streets</label><br>
             <label><input type="radio" name="l2" value="Shops"> The shops</label>
         </p>
 
-        <p>3) What else did she enjoy?<br>
+        <p>3) What else has she enjoyed?<br>
             <label><input type="radio" name="l3" value="Food"> The local food</label><br>
             <label><input type="radio" name="l3" value="Music"> The music</label>
         </p>
@@ -127,3 +128,4 @@
 
 </body>
 </html>
+
