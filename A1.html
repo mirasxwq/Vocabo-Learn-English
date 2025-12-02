@@ -17,29 +17,29 @@
     <!-- READING -->
     <h3>Reading</h3>
     <p class="muted" id="readingText">
-        I have a cat. Her name is Luna. She is gray and small. She likes to sleep on the sofa.
+        Every morning I wake up at 7 o’clock. I wash my face and brush my teeth. Then I eat breakfast. I usually have tea and toast. After breakfast, I go to school. I like mornings because they are quiet.
     </p>
 
     <form>
-        <p>1) What is the cat's name?<br>
-            <label><input type="radio" name="reading_q1" value="Luna"> Luna</label><br>
-            <label><input type="radio" name="reading_q1" value="Kitty"> Kitty</label>
+        <p>1) What time does the person wake up?<br>
+            <label><input type="radio" name="reading_q1" value="At 6 o’clock"> At 6 o’clock</label><br>
+            <label><input type="radio" name="reading_q1" value="At 7 o’clock"> At 7 o’clock</label>
         </p>
 
-        <p>2) What color is the cat?<br>
-            <label><input type="radio" name="reading_q2" value="Gray"> Gray</label><br>
-            <label><input type="radio" name="reading_q2" value="Black"> Black</label>
+        <p>2) What does the person usually eat for breakfast?<br>
+            <label><input type="radio" name="reading_q2" value="Tea and toast"> Tea and toast</label><br>
+            <label><input type="radio" name="reading_q2" value="Pizza"> Pizza</label>
         </p>
 
-        <p>3) Where does the cat sleep?<br>
-            <label><input type="radio" name="reading_q3" value="Sofa"> On the sofa</label><br>
-            <label><input type="radio" name="reading_q3" value="Garden"> In the garden</label>
+        <p>3) Why does the person like mornings?<br>
+            <label><input type="radio" name="reading_q3" value="Because mornings are noisy"> Because mornings are noisy</label><br>
+            <label><input type="radio" name="reading_q3" value="Because mornings are quiet"> Because mornings are quiet</label>
         </p>
     </form>
 
     <div style="display:flex; gap:10px; flex-wrap:wrap;">
         <button class="btn btn-blue" onclick="checkReading('A1')">Перевірити</button>
-        <button id="readingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні відповіді: Luna, Gray, On the sofa')">Правильні відповіді</button>
+        <button id="readingAnswerBtn" class="btn btn-yellow" disabled onclick="alert('Правильні відповіді: At 7 o’clock, Tea and toast, Because mornings are quiet')">Правильні відповіді</button>
     </div>
 
     <div id="readingResult" class="muted" style="margin-top:10px;"></div>
@@ -75,12 +75,12 @@
             <label><input type="radio" name="l1" value="Businka"> Businka</label>
         </p>
 
-        <p>2) What color is Milka?<br>
+        <p>2) What color is the Mary's cat?<br>
             <label><input type="radio" name="l2" value="C"> Gray with white paws</label><br>
             <label><input type="radio" name="l2" value="D"> Orange</label>
         </p>
 
-        <p>3) What does Milka like to do?<br>
+        <p>3) What does the cat like to do?<br>
             <label><input type="radio" name="l3" value="B"> Chase a ball of yarn</label><br>
             <label><input type="radio" name="l3" value="A"> Sleep all day</label>
         </p>
@@ -99,7 +99,7 @@
     <h3>Writing / Pronunciation</h3>
 	    <p class="muted">Опиши картинку англійською</p>
 
-    <img src="image\cat.png"
+    <img src="img\cat.png"
          class="responsive" alt="Black cat in box">
 
     <input id="speakTextInput" type="text" placeholder="Your description...">
@@ -124,3 +124,4 @@
 
 </body>
 </html>
+
