@@ -3,8 +3,8 @@
 const samples = {
     A1: {
         reading: {
-            text: "I have a cat. Her name is Luna. She is gray and small. She likes to sleep on the sofa.",
-            correct: { q1: "Luna", q2: "Gray", q3: "Sofa" }
+            text: "Every morning I wake up at 7 o’clock. I wash my face and brush my teeth. Then I eat breakfast. I usually have tea and toast. After breakfast, I go to school. I like mornings because they are quiet.",
+            correct: { q1: "At 7 o’clock", q2: "Tea and toast", q3: "Because mornings are quiet" }
         },
         speaking: "A black cat is sitting in a box",
         listening: `Mary has got a kitty! Her name is Milka. She is gray with white paws and green eyes.`,
@@ -322,4 +322,5 @@ function clearResults() {
 
 /* Ensure voices load in some browsers */
 if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
 
