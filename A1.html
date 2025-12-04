@@ -106,39 +106,7 @@
 
 <hr><br>
 
-<!-- Java Script -->
 <script>
-function checkSpeaking(level) {
-    const correctDescriptions = {
-        "A1": "A black-framed white square containing four outlined shapes, like a red circle, an orange triangle, a blue square, and a purple heart, each in a different corner."
-    };
-
-    const userText = document.getElementById("speakTextInput").value.trim().toLowerCase();
-    const correctText = correctDescriptions[level].toLowerCase();
-
-    if (!userText) {
-        document.getElementById("speakingResult").innerHTML = "Будь ласка, введіть свій опис.";
-        return;
-    }
-
-    const userWords = userText.split(/\s+/);
-    const correctWords = correctText.split(/\s+/);
-
-    let matches = 0;
-
-    userWords.forEach(word => {
-        if (correctWords.includes(word)) {
-            matches++;
-        }
-    });
-
-    const accuracy = Math.round((matches / correctWords.length) * 100);
-
-    document.getElementById("speakingResult").innerHTML =
-        `Ваш опис збігається на <b>${accuracy}%</b>.`;
-}
-</script>
-    <script>
 function checkSpeaking(level) {
     const correctDescriptions = {
         "A1": "A black cat is sitting in a box."
@@ -177,13 +145,10 @@ function checkSpeaking(level) {
             "Ваш опис правильний!";
     } else {
         document.getElementById("speakingResult").innerHTML =
-            "Слова є, але порядок неправильний.";
+            "Слова правильні, але порядок неправильний.";
     }
 }
 </script>
-</body>
-</html>
-
 </body>
 </html>
 
@@ -199,6 +164,7 @@ function checkSpeaking(level) {
 
 </body>
 </html>
+
 
 
 
