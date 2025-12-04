@@ -90,22 +90,57 @@
 
     <hr><br>
 
-    <!-- WRITING / PRONUNCIATION -->
-    <h3>Writing / Pronunciation</h3>
-	    <p class="muted">Опиши картинку англійською</p>
+  <!-- WRITING / PRONUNCIATION -->
+<h3>Writing / Pronunciation</h3>
+<p class="muted">Опиши картинку англійською</p>
 
-    <img src="img\А1.jpg"
-         class="responsive" alt="Black cat  in box">
+<img src="img/А1.jpg" class="responsive" alt="Black cat is sitting on the box">
 
-    <input id="speakTextInput" type="text" placeholder="Your description...">
+<input id="speakTextInput" type="text" placeholder="Your description...">
 
-    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
-        <button class="btn btn-blue" onclick="checkSpeaking('A1')">Перевірити</button>
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+    <button class="btn btn-blue" onclick="checkSpeaking('A1')">Перевірити</button>
+</div>
 
+<div id="speakingResult" class="muted" style="margin-top:10px;"></div>
 
-    <div id="speakingResult" class="muted" style="margin-top:10px;"></div>
+<hr><br>
 
-    <hr><br>
+<!-- Java Script -->
+<script>
+function checkSpeaking(level) {
+    const correctDescriptions = {
+        "A1": "A black-framed white square containing four outlined shapes, like a red circle, an orange triangle, a blue square, and a purple heart, each in a different corner."
+    };
+
+    const userText = document.getElementById("speakTextInput").value.trim().toLowerCase();
+    const correctText = correctDescriptions[level].toLowerCase();
+
+    if (!userText) {
+        document.getElementById("speakingResult").innerHTML = "Будь ласка, введіть свій опис.";
+        return;
+    }
+
+    const userWords = userText.split(/\s+/);
+    const correctWords = correctText.split(/\s+/);
+
+    let matches = 0;
+
+    userWords.forEach(word => {
+        if (correctWords.includes(word)) {
+            matches++;
+        }
+    });
+
+    const accuracy = Math.round((matches / correctWords.length) * 100);
+
+    document.getElementById("speakingResult").innerHTML =
+        `Ваш опис збігається на <b>${accuracy}%</b>.`;
+}
+</script>
+</body>
+</html>
+
     
 
     <!-- NAV -->
@@ -118,6 +153,7 @@
 
 </body>
 </html>
+
 
 
 
