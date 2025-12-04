@@ -138,6 +138,52 @@ function checkSpeaking(level) {
         `Ваш опис збігається на <b>${accuracy}%</b>.`;
 }
 </script>
+    <script>
+function checkSpeaking(level) {
+    const correctDescriptions = {
+        "A1": "A black cat is sitting in a box."
+    };
+
+    const userText = document.getElementById("speakTextInput").value
+        .trim()
+        .toLowerCase();
+
+    const correctText = correctDescriptions[level].toLowerCase();
+
+    if (!userText) {
+        document.getElementById("speakingResult").innerHTML =
+            "Будь ласка, введіть свій опис.";
+        return;
+    }
+
+    const userWords = userText.split(/\s+/);
+    const correctWords = correctText.split(/\s+/);
+
+    let orderCorrect = true;
+
+    if (userWords.length !== correctWords.length) {
+        orderCorrect = false;
+    } else {
+        for (let i = 0; i < userWords.length; i++) {
+            if (userWords[i] !== correctWords[i]) {
+                orderCorrect = false;
+                break;
+            }
+        }
+    }
+
+    if (orderCorrect) {
+        document.getElementById("speakingResult").innerHTML =
+            "Ваш опис правильний!";
+    } else {
+        document.getElementById("speakingResult").innerHTML =
+            "Слова є, але порядок неправильний.";
+    }
+}
+</script>
+</body>
+</html>
+
 </body>
 </html>
 
@@ -153,6 +199,7 @@ function checkSpeaking(level) {
 
 </body>
 </html>
+
 
 
 
