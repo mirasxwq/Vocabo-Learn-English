@@ -7,8 +7,8 @@ const samples = {
             correct: { q1: "Luna", q2: "Gray", q3: "Sofa" }
         },
         speaking: "A black cat is sitting in a box",
-        listening: `Oksana: Hi, Mary! How are you? Mary: Hi! I'm great, I got a kitty! Her name is Milka. She is gray with white paws and green eyes.`,
-        listeningCorrect: { l1: "Milka", l2: "C", l3: "B" },
+        listening: `Mary has got a kitty! Her name is Milka. She is gray with white paws and green eyes.`,
+        listeningCorrect: { l1: "Milka", l2: "Gray with white paws" },
         pronunciation: "I have a little kitten."
     },
 
@@ -18,7 +18,7 @@ const samples = {
             correct: { q1: "Tom", q2: "Mountains", q3: "Anna" }
         },
         speaking: "Two children are walking near the mountains",
-        listening: `Tom: Hi Anna! Do you want to go to the zoo today? Anna: Sure! I love animals. Tom: Me too! I want to see the monkeys.`,
+        listening: `Tom and Anna want to go to the zoo today, because Anna loves animals and Tom wants to see the monkeys.`,
         listeningCorrect: { l1: "Zoo", l2: "Animals", l3: "Monkeys" },
         pronunciation: "We are walking to the mountain village."
     },
@@ -29,7 +29,7 @@ const samples = {
             correct: { q1: "Spain", q2: "Food", q3: "Spanish" }
         },
         speaking: "A girl is traveling and taking photos in an old town",
-        listening: `Sarah: My trip to Spain was amazing! Friend: What did you like most? Sarah: The old streets and the local food.`,
+        listening: `Two days ago, Sarah came back from Spain. She says that the trip was amazing and memorable, but the most, Anna liked the old streets and the local food`,
         listeningCorrect: { l1: "Spain", l2: "Streets", l3: "Food" },
         pronunciation: "Traveling helps people understand the world better."
     },
@@ -322,3 +322,4 @@ function clearResults() {
 
 /* Ensure voices load in some browsers */
 if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
