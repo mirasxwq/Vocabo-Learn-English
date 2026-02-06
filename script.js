@@ -28,7 +28,7 @@ const samples = {
             text: "Sarah enjoys traveling. Last summer she visited Spain, where she explored old streets, tasted traditional food, and learned a few Spanish words.",
             correct: { q1: "Spain", q2: "Food", q3: "Spanish" }
         },
-        speaking: "A girl is traveling and taking photos in an old town",
+        speaking: "A small cup is standing on a wooden table. Next to the cup, there is an open notebook",
         listening: `Two days ago, Sarah came back from Spain. She says that the trip was amazing and memorable, but the most, Anna liked the old streets and the local food`,
         listeningCorrect: { l1: "Spain", l2: "Streets", l3: "Food" },
         pronunciation: "Traveling helps people understand the world better."
@@ -322,6 +322,7 @@ function clearResults() {
 
 /* Ensure voices load in some browsers */
 if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
 
 
 
