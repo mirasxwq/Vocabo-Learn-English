@@ -17,7 +17,7 @@ const samples = {
             text: "Tom lives in a small town near the mountains. Every morning, he walks to school with his friend Anna. They like to talk about animals.",
             correct: { q1: "Tom", q2: "Mountains", q3: "Anna" }
         },
-        speaking: "Two children are walking near the mountains",
+        speaking: "There is a bouquet of flowers on the table",
         listening: `Tom and Anna want to go to the zoo today, because Anna loves animals and Tom wants to see the monkeys.`,
         listeningCorrect: { l1: "Zoo", l2: "Animals", l3: "Monkeys" },
         pronunciation: "We are walking to the mountain village."
@@ -322,6 +322,7 @@ function clearResults() {
 
 /* Ensure voices load in some browsers */
 if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
 
 
 
