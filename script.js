@@ -7,7 +7,7 @@ const samples = {
             correct: { q1: "At 7 o’clock", q2: "Tea and toast", q3: "Because mornings are quiet" }
         },
         speaking: "A black cat is sitting in a box",
-        listening: `Mary has got a kitty! Her name is Milka. She is gray with white paws and green eyes.`,
+        listening: `Mary has got a kitty! Her name is Milka. She is gray with white paws and green eyes. Milka is lying on the sofa.`,
         listeningCorrect: { l1: "Milka", l2: "Gray with white paws", l3:"Lying on the sofa"},
         pronunciation: "I have a little kitten."
     },
@@ -322,6 +322,7 @@ function clearResults() {
 
 /* Ensure voices load in some browsers */
 if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
 
 
 
